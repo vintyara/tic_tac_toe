@@ -1,6 +1,8 @@
 ready = ->
   $('#tic_tac_toe .field_block').click (e) ->
     elm = $(e.target)
+    return unless elm.hasClass('empty')
+    return if $('#tic_tac_toe .game_field').data('winner-player')
 
     $.ajax
       url: $('#tic_tac_toe .game_field').data('server-path')

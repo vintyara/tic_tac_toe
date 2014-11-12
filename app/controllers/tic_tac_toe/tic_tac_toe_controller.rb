@@ -10,5 +10,11 @@ module TicTacToe
       @game.make_turn(params[:x], params[:y])
       render nothing: true
     end
+
+    def new_game
+      @game = TicTacToe::TheGame.instance
+      @game.clear_field
+      redirect_to action: :the_game
+    end
   end
 end

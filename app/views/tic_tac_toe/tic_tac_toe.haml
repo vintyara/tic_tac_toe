@@ -1,11 +1,15 @@
 #tic_tac_toe
   .row
     .col-md-4
-      .game_field{ data: { server_path: make_turn_path } }
+      .game_field{ data: { server_path: make_turn_path, winner_player: @game.winner_player } }
         - (board_size = @game.game_field.first.length).times do |x|
           .row
             - board_size.times do |y|
-              .col-md-3.field_block.empty{ data: { x: x, y: y } }= @game.game_field[x][y] || raw('&nbsp;')
+              - column_sign = @game.game_field[x][y]
+              - html_class  = column_sign ? '' : 'empty'
+              .col-md-3.field_block{ data: { x: x, y: y }, class: html_class }= column_sign || raw('&nbsp;')
 
     .col-md-4
-      %h2= @game.player_sign
+      = link_to 'New game', new_tic_tac_toe_path
+      %br
+      %h2= @game.winner_player ? "#{@game.winner_player} is Winner!" : "Next turn: #{@game.player_sign}"
