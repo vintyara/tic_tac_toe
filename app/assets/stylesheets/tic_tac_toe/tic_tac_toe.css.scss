@@ -1,0 +1,11 @@
+#tic_tac_toe {
+  .game_field {
+    .field_block {
+      border: 1px solid #000;
+    }
+
+    .field_block.empty {
+      cursor: pointer;
+    }
+  }
+}

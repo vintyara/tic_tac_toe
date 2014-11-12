@@ -1,0 +1,11 @@
+#tic_tac_toe
+  .row
+    .col-md-4
+      .game_field{ data: { server_path: make_turn_path } }
+        - (board_size = @game.game_field.first.length).times do |x|
+          .row
+            - board_size.times do |y|
+              .col-md-3.field_block.empty{ data: { x: x, y: y } }= @game.game_field[x][y] || raw('&nbsp;')
+
+    .col-md-4
+      %h2= @game.player_sign

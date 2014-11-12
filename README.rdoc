@@ -1,0 +1,16 @@
+= TicTacToe
+
+Mount routes:
+```
+mount TicTacToe::Engine, at: "/tic_tac_toe"
+```
+
+
+Mount CSS and JS (add in application.js and application.css):
+```
+//= require tic_tac_toe (JS)
+
+ *= require tic_tac_toe (CSS)
+```
+
+User `tic_tac_toe_path` helper for game link
