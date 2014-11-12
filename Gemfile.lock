@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     tic_tac_toe (0.0.1)
-      rails (~> 4.1.0)
+      rails (~> 4.0, >= 4.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -89,5 +89,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pry
+  pry (~> 0)
   tic_tac_toe!

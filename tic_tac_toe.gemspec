@@ -9,13 +9,13 @@ Gem::Specification.new do |s|
   s.email       = ["prosto.vint@gmail.com"]
   s.homepage    = "https://github.com/vintyara/tic_tac_toe"
   s.summary     = "Tic Tac Toe game."
-  s.description = "Tic Tac Toe game."
+  s.description = "Tic Tac Toe simple game."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.1.0"
+  s.add_dependency "rails", '~> 4.0', ">= 4.0.0"
 
-  s.add_development_dependency 'pry'
+  s.add_development_dependency 'pry', "~> 0"
 end
